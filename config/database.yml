@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  encoding: utf8
+
+development:
+  <<: *default
+  database: timerapp_dev
+  host: localhost
+  username: postgres
+  password: postgres
+
+test:
+  <<: *default
+  database: timerapp_test
+  host: localhost
+  username: postgres
+  password: postgres
+production:
+  <<: *default
+  database: timerapp_prd
+  username: survey
+  password: <%= ENV['SURVEY_DATABASE_PASSWORD'] %>
