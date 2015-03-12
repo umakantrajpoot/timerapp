@@ -1,11 +1,11 @@
 class HomesController < ApplicationController
   before_action :authenticate_user!
 
+  respond_to :html, :json
+
   def index
-    respond_to do |format|
-      format.html
-      format.json { render json: {:current_user => current_user}}
-    end
+    @tasks = Task.all.order("created_at DESC")
+    respond_with(@tasks)
   end
 
 end

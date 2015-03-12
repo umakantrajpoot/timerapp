@@ -1,0 +1,46 @@
+<%= form_for(@task) do |f| %>
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <strong>CREATE NEW TASK</strong>
+      <div class="clearboth spacer10"></div>
+      <div class="bdr"></div>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <% if @task.errors.any? %>
+        <div id="error_explanation">
+          <%= @task.errors.full_messages.join("\n").html_safe %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="clearboth"></div>
+    <div class="spacer10"></div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <strong>Task</strong>
+      <div class="clear"></div>
+      <%= f.text_field :task,  class: "form-control" %>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="clearboth"></div>
+    <div class="spacer10"></div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <strong>Description</strong>
+      <div class="clear"></div>
+      <%= f.text_area :description, autofocus: true, class: "form-control txtarea_tsk_dscption" %>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="clearboth"></div>
+    <div class="spacer20"></div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <%= f.submit "Create Task", class: 'btn btn-primary' %>
+      <div class="clear"></div>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+<% end %>

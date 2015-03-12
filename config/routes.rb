@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   }
   resources :homes
 
+  resources :tasks do
+    post :update_working_time, on: :member
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

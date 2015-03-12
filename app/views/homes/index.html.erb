@@ -1,1 +1,8 @@
-Homes page
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <a href="<%= new_task_path %>">Create here to add new task</a>
+    <div class="spacer20"></div>
+    <%= render partial: "tasks/tasks_list", locals: {tasks: @tasks}%>
+  </div>
+</div>

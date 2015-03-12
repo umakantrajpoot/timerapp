@@ -1,0 +1,25 @@
+<% tasks.each do |task| %>
+  <div id ="task-<%= task.id %>">
+    <h4>
+     <strong><%= task.task.capitalize %></strong>
+    </h4>
+    <div class="clearboth spacer10"></div>
+    <%= truncate_task_desc(task.description) %>
+    <div class="clearboth spacer5"></div>
+    <strong>Working Time : </strong>
+    <span id="working_time" data-seconds="<%= task.working_time.present? ? task.working_time : 0%>">
+      <%= time_format(task.working_time) %>
+    </span>
+    <div class="spacer10"></div>
+    <div id="start_pause_lnk">
+      <a href="javascript:void(0);" id="start_timer"  data-task_id="<%= task.id %>">Start</a>
+      <a href="javascript:void(0);" id="pause_timer" class="hide" data-task_id="<%= task.id %>">Pause</a>
+      <a href="javascript:void(0);" id="edit_timer" data-task_id="<%= task.id %>">Edit Timer</a>
+      <a href="javascript:void(0);" id="update_timer" class="hide" data-task_id="<%= task.id %>">Update Timer</a>
+      <a href="javascript:void(0);" id="delete_task" data-task_id="<%= task.id %>" >Delete Task</a>
+    </div>
+    <div class="spacer10"></div>
+    <div class="bdr"></div>
+    <div class="spacer10"></div>
+  </div>
+<% end %>

@@ -3,6 +3,7 @@
 @import "welcome";
 @import "user_signup";
 @import "homes";
+@import "tasks";
 
 body{
   /*background-color: #D6D6D6;*/
@@ -24,6 +25,9 @@ body{
 }
 .spacer20{
   margin-bottom: 20px;
+}
+.spacer50{
+  margin-bottom: 50px;
 }
 
 .clearboth{
