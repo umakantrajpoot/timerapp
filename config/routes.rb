@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :memberships
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,7 +12,6 @@ Rails.application.routes.draw do
     sessions: "users/sessions"
   }
   resources :homes
-
   resources :tasks do
     post :update_working_time, on: :member
   end

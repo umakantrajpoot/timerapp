@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col-lg-4"></div>
-  <div class="col-lg-4">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="col-lg-3"></div>
+  <div class="col-lg-6">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
     <div class="row signup-block">
       <div class="col-lg-2"></div>
       <div class="col-lg-8 signup-block-hdr">
-        <center><strong>CREATE YOUR ACCOUNT</strong></center>
+        <center><strong>Change your password</strong></center>
       </div>
       <div class="col-lg-2"></div>
       <div class="clear bdr"></div>
@@ -18,27 +18,10 @@
       <div class="spacer10"></div>
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
-        <strong>Email</strong>
+        <strong>New password</strong>
         <div class="clear"></div>
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
-      </div>
-      <div class="col-lg-2"></div>
-      <div class="clearboth"></div>
-      <div class="spacer10"></div>
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8">
-        <strong>Username</strong>
-        <div class="clear"></div>
-        <%= f.text_field :username, autofocus: true, class: "form-control" %>
-      </div>
-      <div class="col-lg-2"></div>
-      <div class="clearboth"></div>
-      <div class="spacer10"></div>
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8">
-        <strong>Password</strong><em>(<%= @minimum_password_length %> characters minimum)</em><br />
-        <div class="clear"></div>
-        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+        <%= f.hidden_field :reset_password_token %>
+        <%= f.password_field :password, autofocus: true, autocomplete: "off", class: "form-control" %>
       </div>
       <div class="col-lg-2"></div>
       <div class="clearboth"></div>
@@ -54,7 +37,7 @@
       <div class="spacer20"></div>
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
-        <%= f.submit "Sign up", class: 'btn btn-primary form-control' %>
+        <%= f.submit "Change my password", class: 'btn btn-primary form-control' %>
         <div class="clear"></div>
         <%= render "devise/shared/links" %>
       </div>
@@ -62,5 +45,5 @@
     </div>
     <% end %>
   </div>
-  <div class="col-lg-4"></div>
+  <div class="col-lg-3"></div>
 </div>

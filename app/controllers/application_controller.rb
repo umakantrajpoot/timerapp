@@ -7,7 +7,11 @@ class ApplicationController < ActionController::Base
 
 
   def after_sign_in_path_for(resource)
-    homes_path
+    if current_user.membership.blank?
+      memberships_path
+    else
+      homes_path
+    end
   end
 
   def after_sign_out_path_for(resource)

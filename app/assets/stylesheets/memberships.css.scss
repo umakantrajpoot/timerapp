@@ -1,0 +1,44 @@
+.membership-box{
+  border: 2px solid lightgray;
+  border-radius: 2px;
+  text-align: center;
+  width: 32%;
+  margin: 0px 5px;
+}
+
+.membership-hdr{
+  background-color: #3686be;
+  border-bottom: 1px solid #d3d3d3;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 -15px;
+  padding: 18px;
+}
+
+.membership-amt{
+  color: #3686be;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+
+.membership-service{
+  margin:10px 0px;
+}
+
+.ok-sign{
+  color: #3686be;
+}
+
+.membership-selection-box{
+  margin: 15px 0px;
+  .membership-choose-btn{
+    background-color: #3686be;
+    border: 1px solid #3686be;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 40px;
+  }
+}

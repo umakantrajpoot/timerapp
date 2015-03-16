@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8">
+    <div class="row">
+      <h3>Listing memberships</h3>
+      <div class="clearboth bdr spacer10"></div>
+      <% @memberships.each do |membership| %>
+        <div class="col-lg-4 membership-box">
+          <div class="membership-hdr"><%= membership.name.upcase %></div>
+          <% if membership.amount == 0 %>
+            <div class="membership-amt">Free</div>
+          <% else %>
+            <div class="membership-amt"><%= membership.amount %>/Month</div>
+          <% end %>
+          <div class="membership-service">
+            <span class="glyphicon glyphicon-ok ok-sign"></span>&nbsp;&nbsp;&nbsp;&nbsp;Service
+          </div>
+          <div class="membership-service">
+            <span class="glyphicon glyphicon-ok ok-sign"></span>&nbsp;&nbsp;&nbsp;&nbsp;Service
+          </div>
+          <div class="membership-service">
+            <span class="glyphicon glyphicon-ok ok-sign"></span>&nbsp;&nbsp;&nbsp;&nbsp;Service
+          </div>
+          <div class="membership-service">
+            <span class="glyphicon glyphicon-ok ok-sign"></span>&nbsp;&nbsp;&nbsp;&nbsp;Service
+          </div>
+          <div class="membership-service">
+            <span class="glyphicon glyphicon-ok ok-sign"></span>&nbsp;&nbsp;&nbsp;&nbsp;Service
+          </div>
+
+          <div class="membership-selection-box">
+            <button class="membership-choose-btn">NEXT</button>
+          </div>
+       </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-lg-2"></div>
+</div>
